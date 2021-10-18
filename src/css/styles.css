@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-image: url('../images/bg-pattern.png');
+  }
+  
+  .container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .search-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+  }
+  
+  .search-label {
+    display: block;
+    margin-bottom: 20px;
+  
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .blue {
+    color: rgb(17, 0, 255);
+  }
+  
+  .red {
+    color: rgb(255, 0, 0);
+  }
+  
+  .yellow {
+    color: rgb(255, 196, 0);
+  }
+  
+  .green {
+    color: rgb(0, 255, 64);
+  }
+  
+  #search-input {
+    width: 400px;
+    height: 50px;
+    padding: 10px 20px 10px 45px;
+  
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: 2px 1px 16px 0px rgba(0, 0, 0, 0.39);
+  
+    font-size: 16px;
+  
+    outline: none;
+  
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .search-wrap:hover #search-input,
+  .search-wrap:focus #search-input {
+    box-shadow: 2px 1px 16px 0px rgba(33, 61, 107, 0.39);
+    outline: none;
+  }
+  
+  .icon-wrap {
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+  
+    width: 20px;
+    height: 20px;
+  
+    fill: rgba(0, 0, 0, 0.39);
+  
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .search-wrap:hover .search-icon,
+  .search-wrap:focus .search-icon {
+    fill: rgba(5, 92, 233, 0.39);
+  }
+  
+  .result-wrap {
+    padding: 30px;
+  }
+  
+  .countries-list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .list-item {
+    font-size: 20px;
+    margin-left: 200px;
+  }
+  
+  .one-country-card {
+    list-style: none;
+  }
+  
+  .country-title {
+    margin-top: 0;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .country-info-wrap {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+  }
+  
+  .country-info-caption {
+    font-weight: 700;
+  }
+  
+  .flag {
+    width: 400px;
+    box-shadow: 2px 1px 16px 0px rgba(0, 0, 0, 0.39);
+  }
