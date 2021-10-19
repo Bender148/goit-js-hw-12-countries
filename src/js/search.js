@@ -24,7 +24,7 @@ function onSearch() {
       refs.containerRef.innerHTML = '';
       if (data.length > 10) {
         return showError(
-          'Too many mathces found. Please enter a more specific query.',
+          'Too many mathces found',
         );
       }
       else if (data.length > 1 && data.length <= 10) {
@@ -50,7 +50,7 @@ function getSearchQuery() {
 
 // Функция, которая рендерит карточку для одной страны
 function renderOneCountry(data) {
-  const oneCountryMarkup = oneCountryTpl(data);
+  const oneCountryMarkup = oneCountryTpl(data[0]);
   refs.containerRef.insertAdjacentHTML('beforeend', oneCountryMarkup);
 }
 
