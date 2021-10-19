@@ -1,7 +1,8 @@
-import PNotify from '@pnotify/core';
+import { alert} from '@pnotify/core';
+import '@pnotify/core/dist/PNotify.css';
 
 export default function showError(errorMessage) {
-  PNotify.error({
+  alert.error({
     text: errorMessage,
     delay: 500,
   });

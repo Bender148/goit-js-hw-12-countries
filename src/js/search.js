@@ -5,6 +5,7 @@ import debounce from 'lodash.debounce';
 import showError from './error-notification.js';
 import fetchCountries from './fetchCountries.js';
 
+
 // Добавляем слушатель события на элемент ввода запроса.
 refs.inputRef.addEventListener('input', debounce(onSearch, 500));
 

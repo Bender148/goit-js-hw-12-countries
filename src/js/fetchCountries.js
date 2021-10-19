@@ -1,11 +1,20 @@
+import { alert} from '@pnotify/core';
+
 export default function fetchCountries(searchQuery) {
-    return fetch(`https://restcountries.eu/rest/v2/name/${searchQuery}`)
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          return Promise.reject(response.status);
-        }
-      })
-      .then(data => data);
-  }
+    return fetch(`https://restcountries.com/v3.1/name/${searchQuery}`)
+    .then(response => {
+      return response.json();
+  })
+  .then(result => {
+      if (result.status === 404) {
+          alert({
+              type: "error",
+              text: "No matches find"
+            })
+      } 
+      return result
+  })
+  .catch(error => {
+      console.log("error");
+  });
+}
